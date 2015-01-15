@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ms-text,ms-html</title>
+    <script src="../avalon.js"></script>
+    <style>
+        .ms-controller{
+            visibility: hidden;
+        }
+    </style>
+    <script>
+
+        avalon.ready(function(){
+            var t=avalon.define({
+                $id:'test',
+               content:'<b>hello avalon</b>'
+            });
+            avalon.scan();
+        });
+    </script>
+</head>
+<body>
+<div ms-controller="test" class="ms-controller">
+   <div ms-text="content"></div>
+    <div ms-html="content"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>interpolation-express</title>
+    <script src="../avalon.js"></script>
+    <style>
+        .ms-controller{
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        avalon.config({
+            interpolate:["[[","]]"]
+        })
+        avalon.ready(function(){
+            var t=avalon.define({
+                $id:'text',
+                word:'hello avalon'
+            })
+            avalon.scan();
+        })
+    </script>
+</head>
+<body>
+    <div ms-controller="text" class="ms-controller">
+        <h1>[[word]]</h1>
+    </div>
+</body>
+</html>
